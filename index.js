@@ -184,11 +184,11 @@ function days_load (show_only) {
         try {
             const date_now = str_to_date(data['date']);
             const now_str = get_now_str();
-            Notiflix.Notify.success(`${now_str}源: ${date_now} 更新成功`, {
+            Notiflix.Notify.success(`已加载 ${date_now} 新闻`, {
                 showOnlyTheLastOne: show_only,    });
         } catch (error) {
             const now_str = get_now_str();
-            Notiflix.Notify.success(`${now_str}源: 更新成功`, {
+            Notiflix.Notify.success(`已加载本日新闻`, {
                 showOnlyTheLastOne: show_only,    });   
         }
         // 加载weiyu
