@@ -77,7 +77,7 @@ function get_bing_into_local_storage () {
     xhr.send();
 }
 
-
+//第一次加载
 function first_xhr () {
     const now_time = new Date().getHours() +"hrs" + new Date().getMinutes() + "min";
     try{
@@ -180,7 +180,7 @@ function days_load (show_only) {
         } else {
             document.getElementById('date').innerHTML = '暂无数据';
         }
-        // 显示通知
+        /*// 显示通知
         try {
             const date_now = str_to_date(data['date']);
             const now_str = get_now_str();
@@ -190,7 +190,7 @@ function days_load (show_only) {
             const now_str = get_now_str();
             Notiflix.Notify.success(`已加载本日新闻`, {
                 showOnlyTheLastOne: show_only,    });   
-        }
+        }*/
         // 加载weiyu
         if (data['weiyu'].includes('【微语】')){
             document.getElementById('weiyu').innerHTML = data['weiyu'].replace("【微语】", '');
@@ -285,6 +285,7 @@ function get_day_news(index, origin){
         }
         xhr.open('GET', `/api?index=${index}&cache=${cache}&origin=${origin}`);
         xhr.onload = days_load;
+        Notiflix.Notify.success('本日新闻加载完成');
         xhr.onerror = handleError;
         xhr.send();
       } catch(error){
