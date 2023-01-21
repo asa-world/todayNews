@@ -1242,7 +1242,7 @@ uni-preference-panel,
   #write {
     box-shadow: var(--base-shadow);
     border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0,0.2);
+    border: 1px solid rgba(255, 255, 255,0.3);
   }
 }
 
@@ -1334,7 +1334,7 @@ line,
   --optt-theme-color: #66ff66;
   --optt-theme-color-weak: #99ffdd;
   --optt-theme-color-weaker: #ccffee;
-  --color-em: #111;
+  --color-em: #fffff;
   --color-text: #333;
   --color-weak: #555;
   --color-weakest: #777;
@@ -1394,7 +1394,7 @@ line,
   --bg-strike: none;
   --bg-footnote: none;
 
-  --bg-thead: var(--bg-color-5);
+  --bg-thead: #1d1e22;
   --bg-tbody-opt: var(--bg-color-3);
   --bg-tbody: var(--bg-color-1);
   --bg-thead-hover: var(--optt-theme-color-weak);
@@ -1500,7 +1500,7 @@ content,
   font-family: var(--font-family);
   line-height: var(--line-height);
   background: var(--bg-contents);
-  color: var(--color-text);
+  color: var(--color-em);
   text-align: justify;
 }
 
@@ -2009,7 +2009,6 @@ table th {
 }
 
 table thead tr:hover {
-  background: var(--bg-thead-hover) !important;
   color: var(--color-thead-hover);
 }
 
@@ -2086,7 +2085,7 @@ sup.md-footnote {
 @import url();
 
 :root {
-  --theme-color: #965221;
+  --theme-color: #0084FF;
   --theme-color-weak: #1dbbc9;
   --color-text: #000;
   --text-color: var(--color-text);
@@ -2101,7 +2100,7 @@ sup.md-footnote {
   --color-title-h4: var(--color-em);
   --color-title-h5: var(--color-em);
   --color-title-h6: var(--color-em);
-  --color-quote: var(--color-weak);
+  --color-quote: var(--color-em);
   --color-code: var(--color-weak);
   --color-link: var(--color-weak);
   --color-italic: var(--color-em);
@@ -2127,7 +2126,7 @@ sup.md-footnote {
   --bg-title-h4: none;
   --bg-title-h5: none;
   --bg-title-h6: none;
-  --bg-quote: #fff;
+  --bg-quote: #1d1e22;
   --bg-code: #fff;
   --bg-code-block: #fff;
   --bg-link: none;
@@ -2171,7 +2170,7 @@ sup.md-footnote {
   --base-padding: 0px;
   --opt-padding: 0.5rem;
   --font-weight: 400;
-  --font-size: 0.95rem;
+  --font-size: 1rem;
   --kai-size: 1.05rem;
   --ol-size: 0.95rem;
   --line-height: 2rem;
@@ -2220,12 +2219,12 @@ body {
   font-weight: var(--font-weight);
   font-family: var(--text-font-cn);
   line-height: var(--line-height);
-  background: var(--bg-contents);
+  background: #18171d;
   color: var(--color-text);
 }
 
 body {
-  background: var(--bg-write);
+  background: #18171d;
   -webkit-font-smoothing: antialiased;
   margin: 2rem auto;
   /* padding: 2rem; */
@@ -2876,10 +2875,10 @@ table tr:hover {
 /* CSS */
 .button {
   appearance: none;
-  background-color: #FFFFFF;
+  background-color: #1d1e22;
   border-width: 0;
   box-sizing: border-box;
-  color: #000000;
+  color: var(--color-em);
   cursor: pointer;
   display: inline-block;
   font-family: "HarmonyOS_Regular",Helvetica,sans-serif;
@@ -2907,7 +2906,7 @@ table tr:hover {
 .button:before {
   animation: opacityFallbackOut .5s step-end forwards;
   backface-visibility: hidden;
-  background-color: #EBEBEB;
+  background-color: var(--theme-color);
   clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
   content: "";
   height: 100%;
