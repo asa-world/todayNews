@@ -6,7 +6,7 @@ let show_only = false;
 get_day_news(0, origin);
 show_only = true;
 setTimeout(() => {
-    Notiflix.Notify.warning('正在请求最新数据...');
+    //Notiflix.Notify.warning('正在请求最新数据...');
     first_xhr();
 }, 1000);
 
@@ -124,7 +124,7 @@ function zhihu_first_load () {
         const days = JSON.parse(this.responseText);
     if (days['suc']) {
         days_load.call(this, show_only = false);
-        Notiflix.Notify.success('当前知乎数据源为最新数据');
+        //Notiflix.Notify.success('当前知乎数据源为最新数据');
         const cache = str_to_date(days['data']['date']);
         localStorage.setItem('zhihu_cache', cache);
     } else{
@@ -139,7 +139,7 @@ function _163_init_load () {
     try{
     const days = JSON.parse(this.responseText);
     if (days['suc']) {
-        Notiflix.Notify.success('当前网易新闻数据源为最新数据');
+        //Notiflix.Notify.success('当前网易新闻数据源为最新数据');
         const cache = str_to_date(days['data']['date']);
         localStorage.setItem('163_cache', cache);
     } else{
