@@ -285,7 +285,9 @@ function get_day_news(index, origin){
         }
         xhr.open('GET', `/api?index=${index}&cache=${cache}&origin=${origin}`);
         xhr.onload = days_load;
-        Notiflix.Notify.success('本日新闻加载完成');
+        setTimeout(() => {
+            Notiflix.Notify.success('本日新闻加载完成');
+        }, 1000);
         xhr.onerror = handleError;
         xhr.send();
       } catch(error){
