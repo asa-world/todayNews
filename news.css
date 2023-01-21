@@ -2089,7 +2089,7 @@ sup.md-footnote {
   --theme-color-weak: #1dbbc9;
   --color-text: #000;
   --text-color: var(--color-text);
-  --color-em: #000;
+  --color-em: #ffff;
   --color-strong: #000;
   --color-weak: #111;
   --color-weakest: #333;
@@ -2791,7 +2791,7 @@ table th {
 table th,
 table td {
   padding: 0.5rem 1rem;
-  background: transparent;
+  background: #1d1e22;
 }
 
 table td {
